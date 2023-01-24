@@ -1,0 +1,124 @@
+/****************** MAIN STYLES START *********************/
+/****** HERO START *******/
+.hero {
+    padding-top: 32px;
+    padding-bottom: 108px;
+    background-color: $hero-bg-color;
+    text-align: center;
+    background-image: url('../../images/hero.png');
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: calc(100% + 100px) calc(100% + 100px);
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wrapper--start {
+        width: 100%;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 16px;
+    }
+
+    &__wrapper--end {
+        width: 100%;
+        max-width: 730px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        margin: 0;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 100px;
+        color: #FFFFFF;
+    }
+
+    &__desc {
+        margin: 0;
+        font-size: 18px;
+        line-height: 28px;
+
+        &::before {
+            display: none;
+            content: "";
+            width: 50px;
+            height: 4px;
+            margin-bottom: 40px;
+            background-color: $ready-bg-color;
+        }
+    }
+}
+
+/* TABLET RESPONSIVE START */
+@media only screen and (min-width: 768px) {
+    .hero {
+        padding: 48px 20px 112px 20px;
+        background-position: calc(50% + 384px) bottom;
+
+        &__wrapper--start {
+            margin-bottom: 24px;
+        }
+
+        &__title {
+            font-size: 64px;
+            line-height: 56px;
+        }
+
+        &__wrapper--end {
+            width: 100%;
+            max-width: 457px;
+        }
+    }
+}
+
+/* TABLET RESPONSIVE END */
+
+/* DESKTOP RESPONSIVE START */
+@media only screen and (min-width: 1440px) {
+    .hero {
+        padding-top: 47px;
+        padding-bottom: 120px;
+        background-position: calc(50% + 720px) bottom;
+
+        &__wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        &__wrapper--start {
+            width: 100%;
+            max-width: 350px;
+            margin: 0;
+        }
+
+        &__title {
+            font-size: 64px;
+            line-height: 100px;
+        }
+
+        &__desc {
+            font-size: 18px;
+            line-height: 28px;
+
+            &::before{
+                display: block;
+            }
+        }
+
+        &__wrapper--end {
+            width: 100%;
+            max-width: 730px;
+            margin: 0;
+        }
+    }
+}
+
+/* DESKTOP RESPONSIVE END */
+
+/****** HERO END *******/
+/****************** MAIN STYLES END *********************/
